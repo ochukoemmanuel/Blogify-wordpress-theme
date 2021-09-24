@@ -6,7 +6,7 @@
     ================================================== -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Spurgeon</title>
+    <title>Blogify</title>
 
     <script>
         document.documentElement.classList.remove('no-js');
@@ -795,11 +795,9 @@
 
         </footer><!-- end s-footer -->
 
-
-    <!-- Java Script
-    ================================================== -->
-    <script src="js/plugins.js"></script>
-    <script src="js/main.js"></script>
+        <?php
+            wp_footer();
+            ?>
 
 </body>
 </html>
