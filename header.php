@@ -49,7 +49,7 @@
         ================================================== -->
         <header id="masthead" class="s-header">
 
-            <div class="s-header__branding">
+            <div class="s-header__branding .s-header__branding-white">
                 <p class="site-title">
                     <a href="<?php echo site_url() ?>" rel="home"><?php echo get_bloginfo('name'); ?></a>
                 </p>

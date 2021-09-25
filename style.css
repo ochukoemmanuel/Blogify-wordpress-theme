@@ -3266,8 +3266,8 @@ img.u-pull-left {
     color   : black;
 }
 
-.ss-home .s-header__branding a {
-    color : white;
+.ss-home .s-header__branding-white a {
+    color : rgb(255, 255, 255);
 }
 
 /* --------------------------------------------------------------------
@@ -5387,3 +5387,8 @@ body.search-is-visible .s-header__search-inner {
         padding-top : var(--vspace-1);
     }
 }
+
+
+/* ------------------------------ VENDOR CSS ---------------------------------------- */
+
+

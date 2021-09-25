@@ -10,7 +10,7 @@
                             <header class="entry__header">
     
                                 <h1 class="entry__title">
-                                    Understanding and Using Negative Space.
+                                    <?php the_title(); ?>
                                 </h1>
 
                                 <div class="entry__meta">
@@ -19,7 +19,7 @@
                                             <circle cx="12" cy="8" r="3.25" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"></circle>
                                             <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M6.8475 19.25H17.1525C18.2944 19.25 19.174 18.2681 18.6408 17.2584C17.8563 15.7731 16.068 14 12 14C7.93201 14 6.14367 15.7731 5.35924 17.2584C4.82597 18.2681 5.70558 19.25 6.8475 19.25Z"></path>
                                         </svg>
-                                        <a href="#">Naruto Uzumaki</a> 
+                                        <?php the_author_posts_link(); ?> 
                                     </div>
                                     <div class="entry__meta-date">
                                         <svg width="24" height="24" fill="none" viewBox="0 0 24 24">
@@ -36,12 +36,17 @@
                                           
                                         <span class="cat-links">
                                             
-                                            <a href="#0">Inspiration</a>
-                                            <a href="#0">Design</a>
+                                            <a href="#"><?php echo get_the_category_list(' ' ) ?></a>
                                         </span>
                                     </div>
                                 </div>
                             </header>
+
+                            <div class="entry__media">
+                                <figure class="featured-image">
+                                    <img src="<?php the_post_thumbnail_url(); ?>" sizes="(max-width: 2400px) 100vw, 2400px" alt="<?php the_title(); ?>">
+                                </figure>
+                            </div>
                             
                             <?php
     the_content();
