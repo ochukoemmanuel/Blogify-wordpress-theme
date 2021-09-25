@@ -4,6 +4,7 @@
 function blogify_theme_support(){
     add_theme_support( 'title-tag');
     add_theme_support('custom-logo');
+    add_theme_support('post-thumbnails');
 }
 
 add_action('after_setup_theme', 'blogify_theme_support');
@@ -29,6 +30,11 @@ function blogify_resgister_style(){
     // js 
     wp_enqueue_script('plugin-js',get_template_directory_uri() . '/js/plugins.js', array(), NULL, '1.0', true);
     wp_enqueue_script('main-js',get_template_directory_uri() . '/js/main.js', array(), NULL, '1.0', true);
+    wp_enqueue_script('main_js', get_template_directory_uri() . '/js/post-main.js', NULL, 1.0, true);
+    wp_localize_script('main_js', 'magicalData', array(
+        'nonce' => wp_create_nonce('wp_rest'),
+        'siteURL' => get_site_url()
+    ));
 }
 
 

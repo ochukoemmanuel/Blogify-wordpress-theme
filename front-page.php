@@ -95,15 +95,43 @@
         <!-- # site-content
         ================================================== -->
         <section id="content" class="s-content">
-            <?php
-                if(have_posts()){
-                    while(have_posts()){
-                        the_post();
-                        the_title();
-                        the_content();
-                    }
-                }
-                ?>
+
+<div class="row entry-wrap">
+                    <div class="column lg-12">
+
+                        <article class="entry">
+
+                            <div class="content-primary">
+
+                                <div class="entry__content admin-quick-add">
+                                    <h4>Create new Post</h4>
+
+                                    <form name="cForm" id="cForm" class="entry__form" method="post" action="" autocomplete="off">
+                                        <fieldset class="row">
+
+                                            <div class="column lg-12 form-field">
+                                                <input name="title" id="cWebsite" class="u-fullwidth" placeholder="Post title" value="" type="text">
+                                            </div>
+
+                                            <div class="column lg-12 message form-field">
+                                                <textarea name="content" id="cMessage" class="u-fullwidth" placeholder="Content"></textarea>
+                                            </div>
+
+                                            <div class="column lg-12">
+                                                <input name="submit" id="quick-add-button" class="btn btn--primary btn-wide btn--large u-fullwidth" value="Create post" type="submit">
+                                            </div>
+
+                                        </fieldset>
+                                    </form> <!-- end form -->
+
+                            </div> <!-- end content-primary -->
+
+                        </article> <!-- end entry -->
+
+                    </div>
+                </div> <!-- end entry-wrap -->
+
+
             <!--  masonry -->
             <div id="bricks" class="bricks">
 
